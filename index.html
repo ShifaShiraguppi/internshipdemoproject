@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AH consulting</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+   <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Auto-assign delays based on class
+    document.querySelectorAll('.slide-left').forEach(el => {
+      el.setAttribute('data-aos-delay', '0');
+    });
+    document.querySelectorAll('.slide-right').forEach(el => {
+      el.setAttribute('data-aos-delay', '300');
+    });
+    document.querySelectorAll('.slide-bottom').forEach(el => {
+      el.setAttribute('data-aos-delay', '500');
+    });
+
+    // Initialize AOS
+    AOS.init({
+      duration: 800, // animation speed
+      once: true     // run animation only once
+    });
+  </script>
+  <header>
+  <div class="container nav-container">
+    <div class="logo-section">
+      <img src="logo.png" alt="AH logo" class="logo-img">
+    </div>
+
+    <div class="nav-right w-100">
+      <nav class="navbar navbar-expand-lg navbar-dark w-100">
+        <div class="container-fluid px-0 d-flex justify-content-between align-items-center">
+
+          <!-- Logo on the left -->
+          <a class="navbar-brand logo-fixed" href="#"></a>
+
+          <!-- Toggle button on the right -->
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu collapses from right side -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav nav-links">
+              <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">SERVICES</a>
+                <ul class="dropdown-menu custom-dropdown">
+                  <li><a class="dropdown-item" href="#executive-coaching">Executive coaching</a></li>
+                  <li><a class="dropdown-item" href="#hrtransform">HR Transform</a></li>
+                  <li><a class="dropdown-item" href="#leadership-development">Leadership development</a></li>
+                  <li><a class="dropdown-item" href="#career-development">Career development</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#testimonials">TESTIMONIALS</a></li>
+              <li class="nav-item"><a class="nav-link" href="#book">MY BOOK</a></li>
+              <li class="nav-item"><a href="#getintouch" class="btn-pink">GET IN TOUCH</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <section class="hero-section">
+    <div class="hero-container" data-aos="fade-right">
+      <div class="hero-text">
+        <div class="logoimg">
+          <img src="logoo.jpg" alt="logo image">
+        </div>
+        <p class="tagline">TRANSFORMATIVE TALKS.IMPACTFUL WORKSHOPS.STRATEGIC COACHING</p>
+        <h1>Unlock <strong>Leadership Excellence</strong>&<br>Elevate <strong>Team Performance</strong>, Today.</h1>
+        <p class="subtext">
+          Award-winning Author, Career Architect, and C-Suite Success Coach, Asad Husain,
+          empowers you to unleash your potential and transform it into unparalleled success.
+        </p>
+        <div class="hero-buttons">
+          <a href="#getintouch" class="btn-dark">GET IN TOUCH</a>
+          <a href="#about" class="blue-transform btn-light">VIEW SERVICES</a>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="image.png" alt="team image">
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-section" data-aos="fade-up">
+  <p class="featured-title">AS FEATURED IN</p>
+  <div class="logo-row">
+    <img src="forbes.png" alt="Forbes logo">
+    <img src="hrdirector.png" alt="HR Director logo">
+    <img src="fastcompany.png" alt="Fast Company logo">
+    <img src="HR.png" alt="HR logo">
+  </div>
+</section>
+
+<section class="leadership-content">
+  <p class="sub-label">HOW CAN I HELP?</p>
+  <h2 id="heading">
+    Do You or Your Team Face<br>
+    These <span class="highlight">Critical Leadership Challenges?</span>
+  </h2>
+
+  <div class="challenges">
+    <div class="challenge-box" data-aos="fade-right">
+      <img src="bodybuilder.png" alt="Icon 1" class="icon1">
+      <img src="lines.png" alt="separator line" class="separator">
+      <h3>Transform Your HR Department into a Strategic Powerhouse.</h3>
+      <ul>
+        <li>Your HR isn’t aligned with business goals?</li>
+        <li>Your team lacks the skills to perform their best?</li>
+        <li>You struggle to get clear insights on team performance?</li>
+      </ul>
+    </div> 
+
+    <div class="challenge-box">
+      <img src="flag.png" alt="Icon 2" class="icon2">
+      <img src="lines.png" alt="separator line" class="separator">
+      <h3>Empower Your Leaders to Shape the Future.</h3>
+      <ul>
+        <li>You find decision-making in complex environments overwhelming?</li>
+        <li>You lack visionary leaders to drive change?</li>
+        <li>Your team struggles to adapt to future trends?</li>
+      </ul>
+    </div>
+
+    <div class="challenge-box" data-aos="fade-left">
+      <img src="stairs.png" alt="Icon 3" class="icon3">
+      <img src="lines.png" alt="separator line" class="separator">
+      <h3>Unlock the Full Potential of Your Career</h3>
+      <ul>
+        <li>You’re unclear on your career path?</li>
+        <li>You struggle to build visibility and influence?</li>
+        <li>You feel unfulfilled and disconnected from your goals?</li>
+      </ul>
+    </div>
+  </div>
+
+  <button ><a href="#getintouch" class="get-in-touch">GET IN TOUCH</a></button>
+</section>
+
+<section class="help-section" id="executive-coaching">
+  <div class="help-container">
+    <div class="help-img" data-aos="fade-right">
+      <img src="coach.jpg" alt="coach">
+    </div>
+    <div class="help-text" data-aos="fade-left">
+      <p class="subheading">WORK WITH ME</p>
+      <h2 class="main-heading"><strong>Executive Coaching:</strong><br>Unlock Leadership Excellence</h2>
+      <p class="light">Personalized coaching for senior leaders navigating complex challenges.</p>
+      <ul class="help-points">
+        <li><strong>1:1 Executive Coaching:</strong> tailored development plans and realtime decision making support.</li>
+        <li><strong>360 Feedback Assessments:</strong> Build self-awareness and identify growth areas.</li>
+        <li><strong>Leadership Growth Frameworks:</strong> Define success metrics and accountability structures.</li>
+      </ul>
+      <a class="ctabuttonx" href="#getintouch">SIGN ME UP</a>
+    </div>
+  </div>
+</section>
+
+<section class="hr-transformation-section" id="hrtransform">
+  <div class="container">
+    <div class="row">
+      <div class="left-content" style="flex:1;" data-aos="fade-right">
+        <p class="section-label">WORK WITH ME</p>
+        <h2 class="section-title">
+          <strong>HR Transformation:</strong><br>Build a Future-Ready HR Function
+        </h2>
+        <img src="lines.png" alt="separator line" class="separator">
+        <p class="light-text">
+          We turn HR functions into strategic powerhouse that drive business performance and organizational excellence.
+        </p>
+        <ul class="custom-list">
+        <li>Executive Partnership
+          <ul><br>                             
+          <li>Strategic advisory for CPOs/CHROs to expand their impact</li>
+          <li>Build influential C-suite relationships</li>
+          <li>Navigate complex transformations</li>
+          </ul>
+        </li><br>
+        <li>HR Strategy Design
+          <ul><br>
+            <li>Align HR capabilities with business priorities</li>
+            <li>Create scalable operating models</li>
+            <li>Develop future-ready talent frameworks</li>
+          </ul>
+        </li><br>
+        <li>Performance Acceleration
+          <ul><br>
+            <li>Implement metrics that matter</li>
+            <li>Design high-impact HR programs</li>
+            <li>Build high-performing HR teams</li>
+          </ul>
+        </li>
+      </ul>
+      <br><br>
+      <div class="impact-box">       
+        <ul>
+          <p class="pink-title">MEASURABLE IMPACT</p>
+          <li>• Enhanced business performance through strategic HR initiatives</li>
+          <li>• Improved talent outcomes and leadership pipeline</li>
+          <li>• Increased HR team effectiveness and credibility</li>
+        </ul>
+      </div>
+    
+      <a class="signup blue-transform" href="#getintouch">SIGN ME UP</a>
+
+      </div>
+      <div class="right-image" style="flex: 1;" data-aos="fade-left">
+        <img src="team.jpg" alt="team">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="leadership-section" id="leadership-development">
+  <div class="leadership-container">
+    <div class="leadership-img" data-aos="fade-right">
+      <img src="person.jpg" alt="person">
+    </div>
+    <div class="leadership-text" data-aos="fade-left">
+      <p class="work-with-me">WORK WITH ME</p>
+      <h2>Leadership Development:<span class="subhead"> Cultivate Future-Ready Leaders</span></h2>
+      <img src="lines.png" alt="separator line" class="separator">
+      <p class="desc">Comprehensive programs to develop<br>leadership capabilities across all levels.</p>
+      <ul class="bullet-points">
+        <li><strong>Leadership Capability Building:</strong> Targeted skill development for current and future leaders.</li>
+        <li><strong>Action Learning Projects:</strong> Experiential programs to apply leadership skills.</li>
+        <li><strong>Succession Planning:</strong> Ensure readiness for critical leadership transitions.</li>
+        <a href="#getintouch" class="blue-transform cta-button">SIGN ME UP</a>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="career-section" id="career-development">
+  <div class="career-container">
+    <div class="career-content" data-aos="fade-right">
+      <p class="career-subtitle">WORK WITH ME</p>
+      <h2 class="career-title">Career Development:<br><span class="career-subheading">Empower Individual Growth</span></h2>
+      <img src="lines.png" alt="separator line" class="separator">
+      <p class="career-description">Programs to help employees navigate career growth while strengthening<br>
+        organizational capability.</p>
+      <ul class="career-points">
+        <li><strong>Career Pathways:</strong> Design clear, actionable growth frameworks.</li>
+        <li><strong>Personal Branding Workshops:</strong> Equip employees to enhance visibility and influence.</li>
+        <li><strong>Coaching Programs:</strong> Tailored plans to guide career transitions.</li>
+      </ul>
+      
+      <a href="#getintouch" class="blue-transform career-button">SIGN ME UP</a>    
+
+    </div>
+    <div class="career-image" data-aos="fade-left">
+      <img src="girl.jpg" alt="Career Development">
+    </div>
+  </div>
+</section>
+
+<section class="companies-section" data-aos="fade-up">
+  <p class="companies-subtitle">COMPANIES WE'VE IMPACTED</p>
+  <div class="company-logos">
+    <img src="mondelez.png" alt="Mondelez Logo">
+    <img src="transporeon.png" alt="Transporeon Logo">
+    <img src="scilife.png" alt="Scilife Logo">
+    <img src="meezan.png" alt="Meezan Bank Logo">
+  </div>
+</section>
+
+<!-- Client Testimonials Section -->
+<section id="testimonials" class="testimonial-section">
+  <div class="container text-center" id="testimonials">
+    <p class="text-uppercase fw-bold mb-2" style="color: #f0426c;">Success Stories</p>
+    <h2>Client <span style="font-weight: 900;">Testimonials</span></h2>
+
+    <div id="testimonialCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-wrapper">
+            <div><img src="face.png" alt="Client" class="testimonial-img"></div>
+            <div class="testimonial-text">
+              <p>
+                Asad earned my trust by partnering with me to tackle critical company <br>
+                challenges, improve organizational health, and drive shareholder value.<br>
+                His real-time feedback and coaching strengthened my leadership, and <br>
+                his support in navigating tough conversations demonstrated his role as a <br>
+                trusted advisor in building a mission-aligned culture.
+              </p>
+              <p class="fw-bold" style="color: #f0426c;">MIKE DUFFY, CEO AT ONTRAC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-wrapper">
+            <div><img src="human2.jpg" alt="Client" class="testimonial-img"></div>
+            <div class="testimonial-text">
+              <p>
+                Working with Asad transformed the way our leadership team operates.<br>
+                His ability to identify blind spots and guide us through difficult changes <br>
+                was invaluable. Our communication, trust, and results have never been stronger.
+              </p>
+              <p class="fw-bold" style="color: #f0426c;">PRIYA MEHTA, CHRO AT VISIONTECH</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-wrapper">
+            <div><img src="human3.jpg" alt="Client" class="testimonial-img"></div>
+            <div class="testimonial-text">
+              <p>
+                Asad’s coaching style is firm yet empathetic. He empowered me to step <br>
+                into a more strategic role, strengthened my confidence, and provided <br>
+                frameworks that made a measurable difference to my performance.
+              </p>
+              <p class="fw-bold" style="color: #f0426c;">RAJIV MENON, VP OPERATIONS AT FINOVA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="carousel-item">
+          <div class="testimonial-wrapper">
+            <div><img src="human4.jpg" alt="Client" class="testimonial-img"></div>
+            <div class="testimonial-text">
+              <p>
+                From team alignment to strategic goal setting, Asad guided our senior <br>
+                leadership through a journey of self-awareness and collective growth. <br>
+                His insights created a ripple effect of positive change across the organization.
+              </p>
+              <p class="fw-bold" style="color: #f0426c;">SARA THOMPSON, DIRECTOR AT GREENHIVE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" style="background-color: #f0426c;"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" style="background-color: #f0426c;"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="book-section">
+  <div class="book-background" id="book">
+    <div class="book-content container">
+      <div class="book-image" data-aos="fade-right">
+        <img src="book.png" alt="Careers Unleashed Book">
+      </div>
+      <div class="book-text" data-aos="fade-left">
+        <p class="book-subtitle">ASAD'S AWARD WINNING BOOK</p>
+        <h2 class="book-title">Careers Unleashed:<br><span>Take Control of Your Career and Thrive</span></h2>
+        <div class="underline"></div>
+        <p class="book-highlight">Unlock Your Career Potential Today</p>
+        <p class="book-description">
+          Careers Unleashed is an Amazon bestseller that has empowered countless professionals to break free from career stagnation. 
+          Through actionable strategies and a transformative mindset, the book serves as a trusted guide for unlocking true professional 
+          potential and achieving lasting success.
+        </p>
+        <a href="#" class="blue-transform buy-button">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who-section">
+  <div class="container who-content" id="about" data-aos="fade-right">
+    <div class="who-text">
+      <p class="who-label">WHO AM I</p>
+      <h2 class="who-title">
+        Meet <span>Asad Husain</span> Your<br>
+        Leadership & Career <strong>Catalyst</strong>
+      </h2>
+      <div class="who-underline"></div>
+      <p class="who-para">
+        Asad Husain is a global leader with 30+ years of executive experience across five continents, 
+        driving transformation in Fortune 500s, private equity, startups, and public sector organizations.
+      </p>
+      <p class="who-para">
+        Known as the “CEO Whisperer,” he advises CEOs and boards, helping leaders navigate complexity, 
+        faster growth, and unlock potential.
+      </p>
+      <p class="who-para">
+        As a bestselling author of Careers Unleashed, his insights offer professionals a clear roadmap for 
+        career success, with his thought leadership featured in top business publications worldwide.
+      </p>
+    </div>
+    <div class="who-image" data-aos="fade-left">
+      <img src="asad.jpg" alt="Asad Husain" >
+    </div>
+  </div>
+</section>
+
+<div class="d-flex align-items-stretch justify-content-between bg-white text-dark" id="getintouch"
+  style="height: 100vh; position: relative; overflow: hidden;" id="contact">
+
+  <div class="col-lg-6 p-5 z-2" style="z-index: 2;" data-aos="fade-right">
+    <p class="highlighter" style="color:#f0426c; font-weight: 700; font-size: 13px;">GET IN TOUCH</p>
+    <h3 class="contact-form" style="font-weight: 770; font-size: 40px;">Let's Connect</h3>
+    <div class="who-underline" style="margin-bottom: 5px;"></div>
+    <br>
+    <div class="mb-2">
+      <!-- ✅ Added id="contactForm" -->
+      <form class="contact-form" id="contactForm">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="organization" placeholder="Organization">
+        </div>
+        <div class="mb-3">
+          <select class="form-control" id="services" required>
+            <option value="">Services I'm Interested In</option>
+            <option value="coaching">Executive Coaching</option>
+            <option value="consulting">HR Transformation</option>
+            <option value="workshops">Leadership Development</option>
+          </select>
+        </div>
+        <button type="submit" class="blue-transform button1">SUBMIT</button>
+      </form>
+      <!-- ✅ Message placeholder -->
+      <p id="responseMessage" style="margin-top:10px; font-weight:600;"></p>
+    </div>
+  </div>
+
+  <div class="col-lg-6 p-0 position-relative">
+    <img src="handshake.png" alt="HR Transformation" class="image" />
+  </div>
+</div>
+<div class="footer-green"></div>
+
+<div class="bottom-blue-section"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script>
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    organization: document.getElementById("organization").value,
+    services: document.getElementById("services").value
+  };
+
+  try {
+    const response = await fetch("https://internship-project-demo-ksaejqdp9.vercel.app/api/submit_form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json();
+    document.getElementById("responseMessage").textContent = data.message;
+    document.getElementById("contactForm").reset();
+  } catch (error) {
+    console.error("Error:", error);
+    document.getElementById("responseMessage").textContent = "Error submitting form.";
+  }
+});
+</script>
+
+
+
+</body>
+</html>
