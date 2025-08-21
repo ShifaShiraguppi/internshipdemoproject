@@ -1,35 +1,32 @@
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
+// api/submit_form.js
 export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { name, email, organization, services, message } = req.body;
-
-    if (!name || !email || !services) {
-      return res.status(400).json({ message: "Please fill all required fields." });
+  try {
+    if (req.method !== "POST") {
+      return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    // ✅ Always log submission (your old working code)
-    console.log("📩 New submission received:", { name, email, organization, services, message });
+    // Parse incoming data
+    const { name, email, organization, services } = req.body;
 
-    try {
-      // ✅ Try to send email (new code)
-      await resend.emails.send({
-        from: "Website Form <onboarding@resend.dev>", 
-        to: "shifashiraguppi@gmail.com", // 👈 put YOUR email here
-        subject: "New Contact Form Submission",
-        text: `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nServices: ${services}\nMessage: ${message || "N/A"}`
-      });
+    // Log data to Vercel runtime logs
+    console.log("📩 New Form Submission:", { name, email, organization, services });
 
-      return res.status(200).json({ message: "Form submitted successfully & email sent!" });
-    } catch (error) {
-      console.error("❌ Email sending failed:", error);
-      // ✅ Even if email fails, still return success for user
-      return res.status(200).json({ message: "Form submitted successfully (email failed, but logged)." });
+    // Check if required fields exist
+    if (!name || !email) {
+      return res.status(400).json({ message: "Name and Email are required" });
     }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    return res.status(405).json({ message: "Method Not Allowed" });
+
+    // (Optional) here you could add email sending / database storing logic
+
+    // Always return a response
+    return res.status(200).json({
+      success: true,
+      message: "Form submitted successfully ✅",
+      data: { name, email, organization, services }
+    });
+
+  } catch (error) {
+    console.error("❌ Error in API:", error);
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 }
