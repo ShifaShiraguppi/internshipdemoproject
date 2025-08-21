@@ -461,16 +461,14 @@
 document.getElementById("contactForm").addEventListener("submit", async function(event) {
   event.preventDefault();
 
-  // Collect form data
   const formData = {
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    organization: document.getElementById("organization").value.trim(),
-    services: document.getElementById("services").value.trim()
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    organization: document.getElementById("organization").value,
+    services: document.getElementById("services").value
   };
 
   try {
-    // Send POST request to Vercel serverless function
     const response = await fetch("/api/submit_form", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -478,24 +476,26 @@ document.getElementById("contactForm").addEventListener("submit", async function
     });
 
     if (!response.ok) {
-      throw new Error("❌ Server error (Status: " + response.status + ")");
+      throw new Error("Network response was not ok");
     }
 
     const data = await response.json();
 
-    // Show success message in responseMessage div
-    document.getElementById("responseMessage").textContent = "✅ " + data.message;
+    // ✅ Show success message
+    document.getElementById("responseMessage").textContent = data.message;
 
-    // Reset the form after successful submission
+    // ✅ Log backend response
+    console.log("🎉 Backend Response:", data);
+
+    // Reset form
     document.getElementById("contactForm").reset();
   } catch (error) {
-    console.error("Error submitting form:", error);
-
-    // Show error message
-    document.getElementById("responseMessage").textContent = "⚠️ Error submitting form. Please try again.";
+    console.error("Error:", error);
+    document.getElementById("responseMessage").textContent = "Error submitting form.";
   }
 });
 </script>
+
 
 
 </body>
